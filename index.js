@@ -7,7 +7,7 @@ const bcrypt = require('bcrypt')
 const { User, Blog } = require('./Models/model');
 const app= express()
 app.use(express.json());
-mongoose.connect("mongodb+srv://dkdarshkashyap07:OpvhehPg4zpGRil8@cluster0.ai0fklv.mongodb.net/newUsers!")
+mongoose.connect(`${mongourl}`)
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('Error connecting to MongoDB:', err));
 const SECRET_KEY="mysecretkey"
